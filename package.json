@@ -1,19 +1,18 @@
 {
-    "name": "extension-template",
-    "displayName": "VS Code Extension Template",
-    "version": "1.4.0",
-    "description": "A modern template for creating hybrid VS Code extensions",
+    "name": "spicedb",
+    "displayName": "SpiceDB",
+    "version": "0.0.0",
+    "description": "SpiceDB for VS Code",
     "categories": [
         "Other"
     ],
     "keywords": [
-        "vscode",
-        "extension",
-        "template"
+        "spicedb",
+        "authzed"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/nhedger/vscode-extension-template.git"
+        "url": "https://github.com/nhedger/vscode-spicedb.git"
     },
     "license": "MIT",
     "author": {
@@ -87,7 +86,7 @@
     "galleryBanner": {},
     "preview": true,
     "vsce": {
-        "baseImagesUrl": "https://github.com/nhedger/vscode-extension-template",
+        "baseImagesUrl": "https://github.com/nhedger/vscode-spicedb",
         "dependencies": false
     }
 }
