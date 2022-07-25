@@ -2,9 +2,13 @@ name: Integrate
 
 on:
   push:
+    paths-ignore:
+      - "**.md"
     branches:
       - main
   pull_request:
+    paths-ignore:
+      - "**.md"
   workflow_dispatch:
 
 jobs:
