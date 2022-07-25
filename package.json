@@ -1,0 +1,93 @@
+{
+    "name": "extension-template",
+    "displayName": "VS Code Extension Template",
+    "version": "1.4.0",
+    "description": "A modern template for creating hybrid VS Code extensions",
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "vscode",
+        "extension",
+        "template"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nhedger/vscode-extension-template.git"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Nicolas Hedger",
+        "email": "nicolas@hedger.ch"
+    },
+    "publisher": "nhedger",
+    "main": "./out/extension/node/extension.js",
+    "browser": "./out/extension/web/extension.js",
+    "scripts": {
+        "build": "webpack build",
+        "build:node": "webpack build --config webpack.node.config.ts",
+        "build:web": "webpack build --config webpack.web.config.ts",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "package": "vsce package",
+        "prepare": "lefthook install",
+        "test": "npm run test:web && npm run test:node",
+        "test:node": "node ./out/test-script.js --env node",
+        "test:web": "node ./out/test-script.js --env web",
+        "watch": "webpack watch",
+        "watch:node": "webpack watch --config webpack.node.config.ts",
+        "watch:web": "webpack watch --config webpack.web.config.ts"
+    },
+    "contributes": {
+        "commands": {
+            "title": "Hello World",
+            "command": "vscode-extension-template.helloWorld"
+        }
+    },
+    "activationEvents": [
+        "onCommand:vscode-extension-template.helloWorld"
+    ],
+    "devDependencies": {
+        "@semantic-release/git": "^10.0.1",
+        "@types/chai": "^4.3.1",
+        "@types/glob": "^7.2.0",
+        "@types/mocha": "^9.1.1",
+        "@types/node": "^18.0.1",
+        "@types/vscode": "^1.69.0",
+        "@types/webpack": "^5.28.0",
+        "@types/webpack-env": "^1.17.0",
+        "@types/webpack-node-externals": "^2.5.3",
+        "@typescript-eslint/eslint-plugin": "^5.30.7",
+        "@typescript-eslint/parser": "^5.30.7",
+        "@vscode/test-electron": "^2.1.5",
+        "@vscode/test-web": "^0.0.26",
+        "chai": "^4.3.6",
+        "clean-webpack-plugin": "^4.0.0",
+        "commander": "^9.3.0",
+        "eslint": "^8.20.0",
+        "glob": "^8.0.3",
+        "lefthook": "^1.0.5",
+        "mocha": "^10.0.0",
+        "node-loader": "^2.0.0",
+        "prettier": "^2.7.1",
+        "prettier-plugin-packagejson": "^2.2.18",
+        "semantic-release": "^19.0.3",
+        "semantic-release-vsce": "^5.0.20",
+        "ts-loader": "^9.3.1",
+        "ts-node": "^10.8.2",
+        "typescript": "^4.7.4",
+        "vsce": "^2.9.2",
+        "webpack": "^5.73.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-node-externals": "^3.0.0"
+    },
+    "engines": {
+        "vscode": "^1.69.0"
+    },
+    "galleryBanner": {},
+    "preview": true,
+    "vsce": {
+        "baseImagesUrl": "https://github.com/nhedger/vscode-extension-template",
+        "dependencies": false
+    }
+}
