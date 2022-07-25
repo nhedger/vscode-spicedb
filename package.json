@@ -59,7 +59,7 @@
         "@typescript-eslint/eslint-plugin": "^5.30.7",
         "@typescript-eslint/parser": "^5.30.7",
         "@vscode/test-electron": "^2.1.5",
-        "@vscode/test-web": "^0.0.26",
+        "@vscode/test-web": "^0.0.29",
         "chai": "^4.3.6",
         "clean-webpack-plugin": "^4.0.0",
         "commander": "^9.3.0",
