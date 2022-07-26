@@ -40,11 +40,11 @@
     "contributes": {
         "commands": {
             "title": "Hello World",
-            "command": "vscode-extension-template.helloWorld"
+            "command": "spicedb.helloWorld"
         }
     },
     "activationEvents": [
-        "onCommand:vscode-extension-template.helloWorld"
+        "onCommand:spicedb.helloWorld"
     ],
     "devDependencies": {
         "@semantic-release/git": "^10.0.1",
