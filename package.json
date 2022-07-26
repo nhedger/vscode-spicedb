@@ -38,10 +38,15 @@
         "watch:web": "webpack watch --config webpack.web.config.ts"
     },
     "contributes": {
-        "commands": {
-            "title": "Hello World",
-            "command": "spicedb.helloWorld"
-        }
+        "languages": [
+            {
+                "id": "zed",
+                "extensions": [
+                    ".zed"
+                ],
+                "configuration": "./languages/zed.language-configuration.json"
+            }
+        ]
     },
     "activationEvents": [
         "onCommand:spicedb.helloWorld"
