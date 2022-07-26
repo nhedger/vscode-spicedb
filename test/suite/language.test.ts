@@ -28,15 +28,14 @@ suite("Language Configuration", async () => {
             new Selection(0, 0, 0, 0)
         );
 
-
-        await new Promise(r => setTimeout(r, 2000));
+        await new Promise((r) => setTimeout(r, 2000));
 
         await commands.executeCommand<Location[]>(
             "editor.action.commentLine",
             editor.document.uri
         );
 
-        await new Promise(r => setTimeout(r, 2000));
+        await new Promise((r) => setTimeout(r, 2000));
 
         assert.equal(editor.document.getText(), "// comment me please");
     });
