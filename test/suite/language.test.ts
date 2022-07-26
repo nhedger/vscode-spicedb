@@ -7,15 +7,9 @@ suite("Language Configuration", async () => {
             await workspace.openTextDocument({
                 language: "zed",
                 content: "comment me please",
-            })
+            }),
+            { selection: new Selection(0, 0, 0, 0) }
         );
-
-        // editor.selection = new Selection(
-        //     0,
-        //     0,
-        //     0,
-        //     editor.document.getText().length
-        // );
 
         await commands.executeCommand<Location[]>(
             "editor.action.commentLine",
@@ -30,14 +24,8 @@ suite("Language Configuration", async () => {
             await workspace.openTextDocument({
                 language: "zed",
                 content: "comment me please",
-            })
-        );
-
-        editor.selection = new Selection(
-            0,
-            0,
-            0,
-            editor.document.getText().length
+            }),
+            { selection: new Selection(0, 0, 0, 17) }
         );
 
         await commands.executeCommand<Location[]>(
