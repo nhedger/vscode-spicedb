@@ -39,7 +39,7 @@ suite("Language Configuration", async () => {
     test("it supports toggling block comments", async () => {
         const editor = await openTestSchemaInEditor(
             "comment me please",
-            new Selection(0, 0, 0, 0)
+            new Selection(0, 0, 0, 17)
         );
 
         await commands.executeCommand<Location[]>(
