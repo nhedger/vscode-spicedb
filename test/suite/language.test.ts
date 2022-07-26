@@ -2,7 +2,6 @@ import {
     commands,
     workspace,
     window,
-    Location,
     Selection,
     TextEditor,
 } from "vscode";
@@ -28,14 +27,9 @@ suite("Language Configuration", async () => {
             new Selection(0, 0, 0, 0)
         );
 
-        await new Promise((r) => setTimeout(r, 2000));
+        //await new Promise((r) => setTimeout(r, 2000));
 
-        await commands.executeCommand<Location[]>(
-            "editor.action.commentLine",
-            editor.document.uri
-        );
-
-        await new Promise((r) => setTimeout(r, 2000));
+        await commands.executeCommand("editor.action.commentLine");
 
         assert.equal(editor.document.getText(), "// comment me please");
     });
@@ -46,10 +40,7 @@ suite("Language Configuration", async () => {
             new Selection(0, 0, 0, 17)
         );
 
-        await commands.executeCommand<Location[]>(
-            "editor.action.blockComment",
-            editor.document.uri
-        );
+        await commands.executeCommand("editor.action.blockComment");
 
         assert.equal(editor.document.getText(), "/* comment me please */");
     });
