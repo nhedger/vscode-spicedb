@@ -10,12 +10,12 @@ suite("Language Configuration", async () => {
             })
         );
 
-        editor.selection = new Selection(
-            0,
-            0,
-            0,
-            editor.document.getText().length
-        );
+        // editor.selection = new Selection(
+        //     0,
+        //     0,
+        //     0,
+        //     editor.document.getText().length
+        // );
 
         await commands.executeCommand<Location[]>(
             "editor.action.commentLine",
