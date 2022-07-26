@@ -1,14 +1,31 @@
-import { commands, workspace, window, Location, Selection } from "vscode";
+import {
+    commands,
+    workspace,
+    window,
+    Location,
+    Selection,
+    TextEditor,
+} from "vscode";
 import { assert } from "chai";
+
+const openTestSchemaInEditor = async (
+    content: string,
+    selection?: Selection
+): Promise<TextEditor> => {
+    return await window.showTextDocument(
+        await workspace.openTextDocument({
+            language: "zed",
+            content: content,
+        }),
+        { selection: selection }
+    );
+};
 
 suite("Language Configuration", async () => {
     test("it supports toggling line comments", async () => {
-        const editor = await window.showTextDocument(
-            await workspace.openTextDocument({
-                language: "zed",
-                content: "comment me please",
-            }),
-            { selection: new Selection(0, 0, 0, 0) }
+        const editor = await openTestSchemaInEditor(
+            "comment me please",
+            new Selection(0, 0, 0, 0)
         );
 
         await commands.executeCommand<Location[]>(
@@ -20,12 +37,9 @@ suite("Language Configuration", async () => {
     });
 
     test("it supports toggling block comments", async () => {
-        const editor = await window.showTextDocument(
-            await workspace.openTextDocument({
-                language: "zed",
-                content: "comment me please",
-            }),
-            { selection: new Selection(0, 0, 0, 17) }
+        const editor = await openTestSchemaInEditor(
+            "comment me please",
+            new Selection(0, 0, 0, 0)
         );
 
         await commands.executeCommand<Location[]>(
