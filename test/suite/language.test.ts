@@ -5,7 +5,6 @@ const openTestSchemaInEditor = async (
     content: string,
     selection?: Selection
 ): Promise<TextEditor> => {
-
     const document = await workspace.openTextDocument({
         language: "zed",
         content: content,
@@ -18,7 +17,7 @@ const openTestSchemaInEditor = async (
     return editor;
 };
 
-const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 suite("Language Configuration", async () => {
     test("it supports toggling line comments", async () => {
