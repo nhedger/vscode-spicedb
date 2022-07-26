@@ -25,9 +25,20 @@ suite("Language Configuration", async () => {
             "comment me please",
             new Selection(0, 0, 0, 0)
         );
-        await commands.executeCommand("editor.action.commentLine");
-        await sleep(2000);
-        assert.equal(editor.document.getText(), "// comment me please");
+
+        return new Promise((resolve, reject) => {
+            workspace.onDidChangeTextDocument((e) => {
+                if (
+                    e.document.uri === editor.document.uri &&
+                    e.document.getText() === "// comment me please"
+                ) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            });
+            commands.executeCommand("editor.action.commentLine");
+        });
     });
 
     test("it supports toggling block comments", async () => {
@@ -35,8 +46,18 @@ suite("Language Configuration", async () => {
             "comment me please",
             new Selection(0, 0, 0, 17)
         );
-        await commands.executeCommand("editor.action.blockComment");
-        await sleep(2000);
-        assert.equal(editor.document.getText(), "/* comment me please */");
+        return new Promise((resolve, reject) => {
+            workspace.onDidChangeTextDocument((e) => {
+                if (
+                    e.document.uri === editor.document.uri &&
+                    e.document.getText() === "/* comment me please */"
+                ) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            });
+            commands.executeCommand("editor.action.blockComment");
+        });
     });
 });
