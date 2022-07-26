@@ -96,5 +96,8 @@ export const getConfigForWebWorkerTests = (mode: Mode): Configuration => {
                 maxChunks: 1,
             }),
         ],
+        performance: {
+            hints: false,
+        },
     };
 };

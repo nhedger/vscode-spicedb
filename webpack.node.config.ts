@@ -116,5 +116,8 @@ export const getConfigForNodeTests = (mode: Mode): Configuration => {
                 ],
             }),
         ],
+        performance: {
+            hints: false,
+        },
     };
 };
