@@ -1,10 +1,4 @@
-import {
-    commands,
-    workspace,
-    window,
-    Selection,
-    TextEditor,
-} from "vscode";
+import { commands, workspace, window, Selection, TextEditor } from "vscode";
 import { assert } from "chai";
 
 const openTestSchemaInEditor = async (
