@@ -5,13 +5,16 @@ const openTestSchemaInEditor = async (
     content: string,
     selection?: Selection
 ): Promise<TextEditor> => {
-    return await window.showTextDocument(
-        await workspace.openTextDocument({
-            language: "zed",
-            content: content,
-        }),
-        { selection: selection }
-    );
+    const document = await workspace.openTextDocument({
+        language: "zed",
+        content: content,
+    });
+
+    const editor = await window.showTextDocument(document, {
+        selection: selection,
+    });
+
+    return editor;
 };
 
 suite("Language Configuration", async () => {
@@ -21,11 +24,11 @@ suite("Language Configuration", async () => {
             new Selection(0, 0, 0, 0)
         );
 
-        //await new Promise((r) => setTimeout(r, 2000));
-
         await commands.executeCommand("editor.action.commentLine");
 
         assert.equal(editor.document.getText(), "// comment me please");
+
+        await commands.executeCommand("workbench.action.closeActiveEditor");
     });
 
     test("it supports toggling block comments", async () => {
@@ -37,5 +40,7 @@ suite("Language Configuration", async () => {
         await commands.executeCommand("editor.action.blockComment");
 
         assert.equal(editor.document.getText(), "/* comment me please */");
+
+        await commands.executeCommand("workbench.action.closeActiveEditor");
     });
 });
