@@ -1,7 +1,7 @@
 import { commands, workspace, window, Location, Selection } from "vscode";
 import { assert } from "chai";
 
-suite("Language Configuration", function () {
+suite("Language Configuration", async () => {
     test("it supports toggling line comments", async () => {
         const editor = await window.showTextDocument(
             await workspace.openTextDocument({
