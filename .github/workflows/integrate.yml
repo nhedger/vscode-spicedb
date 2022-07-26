@@ -62,8 +62,8 @@ jobs:
       - name: Build extension and tests
         run: npm run build
       - name: Run tests
-        run: xvfb-run -a npm run test --env "${{ matrix.env }}"
+        run: xvfb-run -a npm run test:${{ matrix.env }}
         if: runner.os == 'Linux'
       - name: Run tests
-        run: npm run test --env "${{ matrix.env }}"
+        run: npm run test:${{ matrix.env }}
         if: runner.os != 'Linux'
