@@ -44,4 +44,20 @@ suite("Language Configuration", async () => {
 
         assert.equal(editor.document.getText(), "/* comment me please */");
     });
+
+    test("it jumps to the next bracket", async () => {
+        const editor = await openTestSchemaInEditor(
+            "definition test { relation reader: user }",
+            new Selection(0, 0, 0, 0)
+        );
+        await sleep(500);
+        await commands.executeCommand("editor.action.jumpToBracket");
+        await sleep(500);
+
+        const positionOfFirstBracket = editor.document.positionAt(16);
+        assert.equal(
+            editor.selection.active.compareTo(positionOfFirstBracket),
+            0
+        );
+    });
 });
