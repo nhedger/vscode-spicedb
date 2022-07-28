@@ -49,7 +49,7 @@
         ]
     },
     "activationEvents": [
-        "onCommand:spicedb.helloWorld"
+        "onLanguage:zed"
     ],
     "devDependencies": {
         "@semantic-release/git": "^10.0.1",
