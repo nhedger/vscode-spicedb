@@ -6,7 +6,8 @@
         "comments": {
             "patterns": [
                 { "include": "#line-comment" },
-                { "include": "#block-comment" }
+                { "include": "#block-comment" },
+                { "include": "#doc-comment" }
             ]
         },
         "line-comment": {
@@ -15,9 +16,14 @@
             "name": "comment.line.double-dash.zed"
         },
         "block-comment": {
-            "begin": "/\\*",
+            "begin": "/\\*[^\\*]",
             "end": "\\*/",
             "name": "comment.block.zed"
+        },
+        "doc-comment": {
+            "begin": "/\\*\\*",
+            "end": "\\*/",
+            "name": "comment.block.documentation.zed"
         }
     }
 }
