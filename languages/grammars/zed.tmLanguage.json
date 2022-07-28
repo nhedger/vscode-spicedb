@@ -4,12 +4,20 @@
     "patterns": [{ "include": "#comments" }],
     "repository": {
         "comments": {
-            "patterns": [{ "include": "#line-comment" }]
+            "patterns": [
+                { "include": "#line-comment" },
+                { "include": "#block-comment" }
+            ]
         },
         "line-comment": {
             "begin": "//",
             "end": "$",
             "name": "comment.line.double-dash.zed"
+        },
+        "block-comment": {
+            "begin": "/\\*",
+            "end": "\\*/",
+            "name": "comment.block.zed"
         }
     }
 }
