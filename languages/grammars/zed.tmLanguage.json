@@ -1,0 +1,15 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.zed",
+    "patterns": [{ "include": "#comments" }],
+    "repository": {
+        "comments": {
+            "patterns": [{ "include": "#line-comment" }]
+        },
+        "line-comment": {
+            "begin": "//",
+            "end": "$",
+            "name": "comment.line.double-dash.zed"
+        }
+    }
+}
