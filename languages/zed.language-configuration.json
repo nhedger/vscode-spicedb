@@ -11,5 +11,6 @@
             "close": " */",
             "notIn": ["string"]
         }
-    ]
+    ],
+    "surroundingPairs": [["{", "}"]]
 }
