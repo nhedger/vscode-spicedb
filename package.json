@@ -68,7 +68,7 @@
         "chai": "^4.3.6",
         "clean-webpack-plugin": "^4.0.0",
         "commander": "^9.3.0",
-        "eslint": "^8.20.0",
+        "eslint": "^8.21.0",
         "glob": "^8.0.3",
         "lefthook": "^1.0.5",
         "mocha": "^10.0.0",
