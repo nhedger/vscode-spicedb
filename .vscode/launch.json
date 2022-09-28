@@ -12,6 +12,7 @@
             "pauseForSourceMap": true,
             "trace": true,
             "args": [
+                "${workspaceFolder}/test/fixtures/test-workspace",
                 "--disable-extensions",
                 "--extensionDevelopmentKind=node",
                 "--extensionDevelopmentPath=${workspaceFolder}"
@@ -31,6 +32,7 @@
             "trace": true,
             "debugWebWorkerHost": true,
             "args": [
+                "${workspaceFolder}/test/fixtures/test-workspace",
                 "--disable-extensions",
                 "--extensionDevelopmentKind=web",
                 "--extensionDevelopmentPath=${workspaceFolder}"
@@ -50,7 +52,8 @@
             "program": "./node_modules/@vscode/test-web/out/index.js",
             "args": [
                 "--browserType=chromium",
-                "--extensionDevelopmentPath=${workspaceFolder}"
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "${workspaceFolder}/test/fixtures/test-workspace"
             ],
             "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
             "preLaunchTask": "npm: watch:web"
@@ -66,6 +69,7 @@
             "pauseForSourceMap": true,
             "trace": true,
             "args": [
+                "${workspaceFolder}/test/fixtures/test-workspace",
                 "--disable-extensions",
                 "--extensionDevelopmentKind=node",
                 "--extensionDevelopmentPath=${workspaceFolder}",
@@ -89,7 +93,7 @@
             "trace": true,
             "debugWebWorkerHost": true,
             "args": [
-                "--disable-extensions",
+                "${workspaceFolder}/test/fixtures/test-workspace",
                 "--extensionDevelopmentKind=web",
                 "--extensionDevelopmentPath=${workspaceFolder}",
                 "--extensionTestsPath=${workspaceFolder}/out/tests/web/test-runner.js"
@@ -115,7 +119,8 @@
             "args": [
                 "--browserType=chromium",
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/out/tests/web/test-runner.js"
+                "--extensionTestsPath=${workspaceFolder}/out/tests/web/test-runner.js",
+                "${workspaceFolder}/test/fixtures/test-workspace"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/extension/web/**/*.js",
