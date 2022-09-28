@@ -37,6 +37,7 @@ export const getConfigForTestScript = (mode: Mode): Configuration => {
             libraryTarget: "commonjs2",
             path: resolve(__dirname, "out"),
         },
+        devtool: "eval-source-map",
         resolve: {
             extensions: [".ts", "..."],
         },

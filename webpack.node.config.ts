@@ -25,6 +25,7 @@ export const getConfigForNodeExtension = (mode: Mode): Configuration => {
             libraryTarget: "commonjs2",
             path: resolve(__dirname, "out", "extension", "node"),
         },
+        devtool: "eval-source-map",
         resolve: {
             extensions: [".ts", "..."],
         },
@@ -84,6 +85,7 @@ export const getConfigForNodeTests = (mode: Mode): Configuration => {
             libraryTarget: "commonjs2",
             path: resolve(__dirname, "out", "tests", "node"),
         },
+        devtool: "eval-source-map",
         resolve: {
             extensions: [".ts", "..."],
         },
