@@ -5,7 +5,7 @@ import { window } from "vscode";
  */
 export const activate = () => {
     console.log("The SpiceDB extension has been activated.");
-    window.showInformationMessage('Hello');
+    window.showInformationMessage("Hello");
 };
 
 /**

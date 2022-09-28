@@ -22,7 +22,7 @@ export const getConfigForWebWorkerExtension = (mode: Mode): Configuration => {
             filename: "extension.js",
             libraryTarget: "commonjs2",
             path: resolve(__dirname, "out", "extension", "web"),
-            devtoolModuleFilenameTemplate: 'file:///[absolute-resource-path]'
+            devtoolModuleFilenameTemplate: "file:///[absolute-resource-path]",
         },
         devtool: "eval-source-map",
         resolve: {
@@ -68,7 +68,7 @@ export const getConfigForWebWorkerTests = (mode: Mode): Configuration => {
             filename: "[name].js",
             libraryTarget: "commonjs2",
             path: resolve(__dirname, "out", "tests", "web"),
-            devtoolModuleFilenameTemplate: 'file:///[absolute-resource-path]'
+            devtoolModuleFilenameTemplate: "file:///[absolute-resource-path]",
         },
         devtool: "eval-source-map",
         resolve: {
