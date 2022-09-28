@@ -5,6 +5,6 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      run: npm run lint
+      run: pnpm run lint
     format:
-      run: npm run format --check
+      run: pnpm run format --check
