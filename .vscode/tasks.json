@@ -26,6 +26,20 @@
                 "clear": true
             },
             "group": "build"
+        },
+        {
+            "type": "npm",
+            "script": "test:browser",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": { "regexp": "__________" },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Listening on http://localhost:3000",
+                    "endsPattern": "Listening on http://localhost:3000"
+                }
+            }
         }
     ]
 }

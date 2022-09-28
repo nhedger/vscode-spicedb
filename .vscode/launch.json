@@ -56,7 +56,19 @@
                 "${workspaceFolder}/test/fixtures/test-workspace"
             ],
             "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
-            "preLaunchTask": "npm: watch:web"
+            "preLaunchTask": "npm: run:browser"
+        },
+        {
+            "name": "🧩 Debug Web Extension in the browser 2",
+            "type": "chrome",
+            "request": "attach",
+            "sourceMaps": true,
+            "sourceMapRenames": true,
+            "trace": true,
+            "address": "localhost",
+            "port": 9229,
+            "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
+            "preLaunchTask": "npm: test:browser"
         },
         // Debug the desktop extension's tests in a VS Code desktop instance
         // using a node-based extension host.

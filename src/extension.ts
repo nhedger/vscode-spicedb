@@ -1,8 +1,11 @@
+import { window } from "vscode";
+
 /**
  * This method is called by VS Code when the extension is activated.
  */
 export const activate = () => {
     console.log("The SpiceDB extension has been activated.");
+    window.showInformationMessage('Hello');
 };
 
 /**
