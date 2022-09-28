@@ -49,6 +49,7 @@
         ]
     },
     "activationEvents": [
+        "*",
         "onLanguage:zed"
     ],
     "devDependencies": {
