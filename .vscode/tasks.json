@@ -33,15 +33,13 @@
             "label": "debug-in-browser",
             "type": "shell",
             "hide": true,
-            "dependsOn": [
-                "npm: watch:web"
-            ],
+            "dependsOn": ["npm: watch:web"],
             "command": "${workspaceFolder}/node_modules/.bin/vscode-test-web",
             "args": [
                 "--browserType=chromium",
                 "--extensionDevelopmentPath=${workspaceFolder}",
                 "--waitForDebugger=9229",
-                "./test/fixtures/test-workspace",
+                "./test/fixtures/test-workspace"
             ],
             "isBackground": true,
             "problemMatcher": {
@@ -60,9 +58,7 @@
             "label": "debug-tests-in-browser",
             "type": "shell",
             "hide": true,
-            "dependsOn": [
-                "npm: watch:web"
-            ],
+            "dependsOn": ["npm: watch:web"],
             "command": "${workspaceFolder}/node_modules/.bin/vscode-test-web",
             "args": [
                 "--browserType=chromium",

@@ -144,6 +144,6 @@
                 "group": "web-extension-browser",
                 "order": 1
             }
-        },
+        }
     ]
 }
