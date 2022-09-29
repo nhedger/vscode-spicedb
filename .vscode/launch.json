@@ -58,6 +58,7 @@
             "request": "attach",
             "sourceMaps": true,
             "sourceMapRenames": true,
+            "pauseForSourceMap": true,
             "trace": true,
             "address": "localhost",
             "port": 9229,
@@ -134,10 +135,15 @@
             "request": "attach",
             "sourceMaps": true,
             "sourceMapRenames": true,
+            "pauseForSourceMap": true,
             "trace": true,
             "address": "localhost",
             "port": 9229,
-            "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
+
+            "outFiles": [
+                "${workspaceFolder}/out/extension/web/**/*.js",
+                "${workspaceFolder}/out/tests/web/**/*.js"
+            ],
             "preLaunchTask": "debug-tests-in-browser",
             "presentation": {
                 "hidden": false,
