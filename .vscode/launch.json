@@ -18,7 +18,12 @@
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "outFiles": ["${workspaceFolder}/out/extension/node/**/*.js"],
-            "preLaunchTask": "npm: watch:node"
+            "preLaunchTask": "npm: watch:node",
+            "presentation": {
+                "hidden": false,
+                "group": "node-extension",
+                "order": 1
+            }
         },
         // Debug the web extension in a VS Code desktop instance using a
         // webworker-based extension host.
@@ -38,28 +43,17 @@
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
-            "preLaunchTask": "npm: watch:web"
+            "preLaunchTask": "npm: watch:web",
+            "presentation": {
+                "hidden": false,
+                "group": "web-extension",
+                "order": 1
+            }
         },
         // Debug the web extension in a VS Code for the browser instance using
         // a webworker-based extension host.
         {
             "name": "🧩 Debug Web Extension in the browser",
-            "type": "node",
-            "request": "launch",
-            "sourceMaps": true,
-            "sourceMapRenames": true,
-            "trace": true,
-            "program": "./node_modules/@vscode/test-web/out/index.js",
-            "args": [
-                "--browserType=chromium",
-                "--extensionDevelopmentPath=${workspaceFolder}",
-                "${workspaceFolder}/test/fixtures/test-workspace"
-            ],
-            "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
-            "preLaunchTask": "npm: run:browser"
-        },
-        {
-            "name": "🧩 Debug Web Extension in the browser 2",
             "type": "chrome",
             "request": "attach",
             "sourceMaps": true,
@@ -68,7 +62,13 @@
             "address": "localhost",
             "port": 9229,
             "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
-            "preLaunchTask": "npm: test:browser"
+            "preLaunchTask": "debug-in-browser",
+            "postDebugTask": "post:debug-in-browser",
+            "presentation": {
+                "hidden": false,
+                "group": "web-extension-browser",
+                "order": 1
+            }
         },
         // Debug the desktop extension's tests in a VS Code desktop instance
         // using a node-based extension host.
@@ -91,7 +91,12 @@
                 "${workspaceFolder}/out/extension/node/**/*.js",
                 "${workspaceFolder}/out/tests/node/**/*.js"
             ],
-            "preLaunchTask": "npm: watch:node"
+            "preLaunchTask": "npm: watch:node",
+            "presentation": {
+                "hidden": false,
+                "group": "node-extension",
+                "order": 1
+            }
         },
         // Debug the web extension's tests in a VS Code desktop instance using
         // a webworker-based extension host.
@@ -114,31 +119,31 @@
                 "${workspaceFolder}/out/extension/web/**/*.js",
                 "${workspaceFolder}/out/tests/web/**/*.js"
             ],
-            "preLaunchTask": "npm: watch:web"
+            "preLaunchTask": "npm: watch:web",
+            "presentation": {
+                "hidden": false,
+                "group": "web-extension",
+                "order": 1
+            }
         },
         // Debug the web extension's tests in a VS Code for the browser instance
         // using a webworker-based extension host.
         {
             "name": "🧪 Debug Web Extension Tests in the browser",
-            "type": "node",
-            "request": "launch",
+            "type": "chrome",
+            "request": "attach",
             "sourceMaps": true,
             "sourceMapRenames": true,
-            "pauseForSourceMap": true,
-            "autoAttachChildProcesses": true,
             "trace": true,
-            "program": "./node_modules/@vscode/test-web/out/index.js",
-            "args": [
-                "--browserType=chromium",
-                "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/out/tests/web/test-runner.js",
-                "${workspaceFolder}/test/fixtures/test-workspace"
-            ],
-            "outFiles": [
-                "${workspaceFolder}/out/extension/web/**/*.js",
-                "${workspaceFolder}/out/tests/web/**/*.js"
-            ],
-            "preLaunchTask": "npm: watch:web"
-        }
+            "address": "localhost",
+            "port": 9229,
+            "outFiles": ["${workspaceFolder}/out/extension/web/**/*.js"],
+            "preLaunchTask": "debug-tests-in-browser",
+            "presentation": {
+                "hidden": false,
+                "group": "web-extension-browser",
+                "order": 1
+            }
+        },
     ]
 }
