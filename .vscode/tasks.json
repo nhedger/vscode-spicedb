@@ -3,6 +3,7 @@
     "tasks": [
         {
             "type": "npm",
+            "hide": true,
             "script": "watch:node",
             "isBackground": true,
             "problemMatcher": "$ts-webpack-watch",
@@ -16,6 +17,7 @@
         },
         {
             "type": "npm",
+            "hide": true,
             "script": "watch:web",
             "isBackground": true,
             "problemMatcher": "$ts-webpack-watch",
@@ -26,6 +28,83 @@
                 "clear": true
             },
             "group": "build"
+        },
+        {
+            "label": "debug-in-browser",
+            "type": "shell",
+            "hide": true,
+            "dependsOn": ["npm: watch:web"],
+            "command": "${workspaceFolder}/node_modules/.bin/vscode-test-web",
+            "args": [
+                "--browserType=chromium",
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--waitForDebugger=9229",
+                "./test/fixtures/test-workspace"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "__________"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Listening on http://localhost:3000",
+                    "endsPattern": "Listening on http://localhost:3000"
+                }
+            }
+        },
+        {
+            "label": "debug-tests-in-browser",
+            "type": "shell",
+            "hide": true,
+            "dependsOn": ["npm: watch:web"],
+            "command": "${workspaceFolder}/node_modules/.bin/vscode-test-web",
+            "args": [
+                "--browserType=chromium",
+                "--extensionDevelopmentPath=${workspaceFolder}",
+                "--extensionTestsPath=${workspaceFolder}/out/tests/web/test-runner.js",
+                "--waitForDebugger=9229",
+                "${workspaceFolder}/test/fixtures/test-workspace"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "__________"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Listening on http://localhost:3000",
+                    "endsPattern": "Listening on http://localhost:3000"
+                }
+            }
+        },
+        {
+            "label": "post:debug-in-browser",
+            "hide": true,
+            "type": "shell",
+            "command": "${input:terminate-debug-in-browser}"
+        },
+        {
+            "label": "post:debug-tests-in-browser",
+            "hide": true,
+            "type": "shell",
+            "command": "${input:terminate-debug-tests-in-browser}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "terminate-debug-in-browser",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "debug-in-browser"
+        },
+        {
+            "id": "terminate-debug-tests-in-browser",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "debug-tests-in-browser"
         }
     ]
 }
