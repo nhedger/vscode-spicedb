@@ -1,7 +1,7 @@
 {
     "name": "spicedb",
-    "version": "0.0.0",
     "displayName": "SpiceDB",
+    "version": "0.0.0",
     "description": "SpiceDB for VS Code",
     "categories": [
         "Other"
