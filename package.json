@@ -30,7 +30,7 @@
         "package": "vsce package",
         "prepare": "lefthook install",
         "test": "npm run test:web && npm run test:node",
-        "test:browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ./test/fixtures/test-workspace --waitForDebugger=9229",
+        "test:browser": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ./test/fixtures/test-workspace --waitForDebugger=9229 --quality stable",
         "test:node": "node ./out/test-script.js --env node",
         "test:web": "node ./out/test-script.js --env web",
         "watch": "webpack watch",
