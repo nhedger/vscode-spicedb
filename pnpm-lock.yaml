@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/chai': ^4.3.3
-  '@types/glob': ^7.2.0
+  '@types/glob': ^8.0.0
   '@types/mocha': ^9.1.1
   '@types/node': ^18.7.23
   '@types/vscode': ^1.71.0
@@ -33,7 +33,7 @@ specifiers:
 
 devDependencies:
   '@types/chai': 4.3.3
-  '@types/glob': 7.2.0
+  '@types/glob': 8.0.0
   '@types/mocha': 9.1.1
   '@types/node': 18.7.23
   '@types/vscode': 1.71.0
@@ -252,6 +252,13 @@ packages:
 
   /@types/glob/7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
+    dependencies:
+      '@types/minimatch': 5.1.2
+      '@types/node': 18.7.23
+    dev: true
+
+  /@types/glob/8.0.0:
+    resolution: {integrity: sha512-l6NQsDDyQUVeoTynNpC9uRvCUint/gSUXQA2euwmTuWGvPY5LSDUu6tkCtJB2SvGQlJQzLaKqcGZP4//7EDveA==}
     dependencies:
       '@types/minimatch': 5.1.2
       '@types/node': 18.7.23
