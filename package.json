@@ -85,7 +85,7 @@
         "webpack-node-externals": "^3.0.0"
     },
     "engines": {
-        "vscode": "^1.69.0"
+        "vscode": "^1.71.2"
     },
     "galleryBanner": {},
     "preview": true,
