@@ -4,6 +4,7 @@
     "rangeStrategy": "bump",
     "packageRules": [
         {
+            "matchManagers": ["pnpm"],
             "matchDepTypes": ["engine"],
             "excludePackageNames": ["vscode"]
         }
