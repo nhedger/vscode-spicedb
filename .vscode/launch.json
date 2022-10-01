@@ -139,7 +139,6 @@
             "trace": true,
             "address": "localhost",
             "port": 9229,
-
             "outFiles": [
                 "${workspaceFolder}/out/extension/web/**/*.js",
                 "${workspaceFolder}/out/tests/web/**/*.js"
