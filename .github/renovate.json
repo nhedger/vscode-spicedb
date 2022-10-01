@@ -1,5 +1,11 @@
 {
     "extends": ["config:base", "schedule:weekly"],
     "labels": ["dependencies"],
-    "rangeStrategy": "bump"
+    "rangeStrategy": "bump",
+    "packageRules": [
+        {
+            "matchDepTypes": ["engine"],
+            "excludePackageNames": ["vscode"]
+        }
+    ]
 }
