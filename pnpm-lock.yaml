@@ -12,7 +12,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.38.1
   '@typescript-eslint/parser': ^5.38.1
   '@vscode/test-electron': ^2.1.5
-  '@vscode/test-web': ^0.0.29
+  '@vscode/test-web': ^0.0.30
   chai: ^4.3.6
   clean-webpack-plugin: ^4.0.0
   commander: ^9.4.1
@@ -43,7 +43,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.38.1_c7qepppml3d4ahu5cnfwqe6ltq
   '@typescript-eslint/parser': 5.38.1_ypn2ylkkyfa5i233caldtndbqa
   '@vscode/test-electron': 2.1.5
-  '@vscode/test-web': 0.0.29
+  '@vscode/test-web': 0.0.30
   chai: 4.3.6
   clean-webpack-plugin: 4.0.0_webpack@5.74.0
   commander: 9.4.1
@@ -455,8 +455,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vscode/test-web/0.0.29:
-    resolution: {integrity: sha512-QJwu3F6U+IT/X6UiRVQEe1tKSB1aRVDlWi5jAfnbXaAH8Gk4NrUFLxAB33mms82XQK4PuCTXAqNd/eC8v3ZQDA==}
+  /@vscode/test-web/0.0.30:
+    resolution: {integrity: sha512-l1StjU5FINfgVrgaKxSrbh+wrpZiFqTT5uQ/r1qano2yn9zWYmZUczQjjzzcUI0m4/38IPkwwI3gezSwdkKtpQ==}
     engines: {node: '>=8.9.3'}
     hasBin: true
     dependencies:
@@ -1372,7 +1372,7 @@ packages:
     dev: true
 
   /ee-first/1.1.1:
-    resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
+    resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
   /electron-to-chromium/1.4.270:
