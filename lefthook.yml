@@ -1,10 +1,9 @@
-# Git hooks manager configuration
-# See https://github.com/evilmartians/lefthook
-
+colors: false
 pre-commit:
   parallel: true
   commands:
     lint:
-      run: pnpm run lint
+      glob: "*.{js,ts}"
+      run: pnpm --no-color exec eslint --no-color {staged_files}
     format:
-      run: pnpm run format --check
+      run: pnpm --no-color exec prettier --color=false --write {staged_files}
