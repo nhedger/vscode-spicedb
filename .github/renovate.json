@@ -6,7 +6,7 @@
         {
             "matchManagers": ["pnpm"],
             "matchDepTypes": ["engines"],
-            "excludePackageNames": ["vscode"]
+            "excludePackageNames": ["microsoft/vscode"]
         }
     ]
 }
