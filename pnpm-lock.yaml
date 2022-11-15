@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/chai': 4.3.3
+  '@types/chai': 4.3.4
   '@types/glob': 8.0.0
   '@types/mocha': 10.0.0
   '@types/node': 18.7.23
@@ -13,7 +13,7 @@ specifiers:
   '@typescript-eslint/parser': 5.38.1
   '@vscode/test-electron': 2.1.5
   '@vscode/test-web': 0.0.30
-  chai: 4.3.6
+  chai: 4.3.7
   clean-webpack-plugin: 4.0.0
   commander: 9.4.1
   eslint: 8.24.0
@@ -32,7 +32,7 @@ specifiers:
   webpack-node-externals: 3.0.0
 
 devDependencies:
-  '@types/chai': 4.3.3
+  '@types/chai': 4.3.4
   '@types/glob': 8.0.0
   '@types/mocha': 10.0.0
   '@types/node': 18.7.23
@@ -44,7 +44,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.38.1_ypn2ylkkyfa5i233caldtndbqa
   '@vscode/test-electron': 2.1.5
   '@vscode/test-web': 0.0.30
-  chai: 4.3.6
+  chai: 4.3.7
   clean-webpack-plugin: 4.0.0_webpack@5.74.0
   commander: 9.4.1
   eslint: 8.24.0
@@ -228,8 +228,8 @@ packages:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
 
-  /@types/chai/4.3.3:
-    resolution: {integrity: sha512-hC7OMnszpxhZPduX+m+nrx+uFoLkWOMiR4oa/AZF3MuSETYTZmFfJAHqZEM8MVlvfG7BEUcgvtwoCTxBp6hm3g==}
+  /@types/chai/4.3.4:
+    resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
 
   /@types/eslint-scope/3.7.4:
@@ -915,13 +915,13 @@ packages:
     resolution: {integrity: sha512-zBUoFU0ZcxpvSt9IU66dXVT/3ctO1cy4y9cscs1szkPlcWb6pasYM144GqrUygUbT+k7cmUCW61cvskjcv0enQ==}
     dev: true
 
-  /chai/4.3.6:
-    resolution: {integrity: sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==}
+  /chai/4.3.7:
+    resolution: {integrity: sha512-HLnAzZ2iupm25PlN0xFreAlBA5zaBSv3og0DdeGA4Ar6h6rJ3A0rolRUKJhSF2V10GZKDgWF/VmAEsNWjCRB+A==}
     engines: {node: '>=4'}
     dependencies:
       assertion-error: 1.1.0
       check-error: 1.0.2
-      deep-eql: 3.0.1
+      deep-eql: 4.1.2
       get-func-name: 2.0.0
       loupe: 2.3.6
       pathval: 1.1.1
@@ -1247,9 +1247,9 @@ packages:
       strip-dirs: 2.1.0
     dev: true
 
-  /deep-eql/3.0.1:
-    resolution: {integrity: sha512-+QeIQyN5ZuO+3Uk5DYh6/1eKO0m0YmJFGNmFHGACpf1ClL1nmlV/p4gNgbl2pJGxgXb4faqo6UE+M5ACEMyVcw==}
-    engines: {node: '>=0.12'}
+  /deep-eql/4.1.2:
+    resolution: {integrity: sha512-gT18+YW4CcW/DBNTwAmqTtkJh7f9qqScu2qFVlx7kCoeY9tlBu9cUcr7+I+Z/noG8INehS3xQgLpTtd/QUTn4w==}
+    engines: {node: '>=6'}
     dependencies:
       type-detect: 4.0.8
     dev: true
