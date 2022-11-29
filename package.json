@@ -39,6 +39,13 @@
         "watch:web": "webpack watch --config webpack.web.config.ts"
     },
     "contributes": {
+        "grammars": [
+            {
+                "language": "zed",
+                "scopeName": "source.zed",
+                "path": "./languages/grammars/zed.tmLanguage.json"
+            }
+        ],
         "languages": [
             {
                 "id": "zed",
