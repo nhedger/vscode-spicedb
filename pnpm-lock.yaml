@@ -12,7 +12,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.38.1
   '@typescript-eslint/parser': 5.38.1
   '@vscode/test-electron': 2.1.5
-  '@vscode/test-web': 0.0.30
+  '@vscode/test-web': 0.0.33
   chai: 4.3.7
   clean-webpack-plugin: 4.0.0
   commander: 9.4.1
@@ -43,7 +43,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.38.1_c7qepppml3d4ahu5cnfwqe6ltq
   '@typescript-eslint/parser': 5.38.1_ypn2ylkkyfa5i233caldtndbqa
   '@vscode/test-electron': 2.1.5
-  '@vscode/test-web': 0.0.30
+  '@vscode/test-web': 0.0.33
   chai: 4.3.7
   clean-webpack-plugin: 4.0.0_webpack@5.74.0
   commander: 9.4.1
@@ -161,24 +161,21 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@koa/cors/3.4.3:
-    resolution: {integrity: sha512-WPXQUaAeAMVaLTEFpoq3T2O1C+FstkjJnDQqy95Ck1UdILajsRhu6mhJ8H2f4NFPRBoCNN+qywTJfq/gGki5mw==}
-    engines: {node: '>= 8.0.0'}
+  /@koa/cors/4.0.0:
+    resolution: {integrity: sha512-Y4RrbvGTlAaa04DBoPBWJqDR5gPj32OOz827ULXfgB1F7piD1MB/zwn8JR2LAnvdILhxUbXbkXGWuNVsFuVFCQ==}
+    engines: {node: '>= 14.0.0'}
     dependencies:
       vary: 1.1.2
     dev: true
 
-  /@koa/router/10.1.1:
-    resolution: {integrity: sha512-ORNjq5z4EmQPriKbR0ER3k4Gh7YGNhWDL7JBW+8wXDrHLbWYKYSJaOJ9aN06npF5tbTxe2JBOsurpJDAvjiXKw==}
-    engines: {node: '>= 8.0.0'}
+  /@koa/router/12.0.0:
+    resolution: {integrity: sha512-cnnxeKHXlt7XARJptflGURdJaO+ITpNkOHmQu7NHmCoRinPbyvFzce/EG/E8Zy81yQ1W9MoSdtklc3nyaDReUw==}
+    engines: {node: '>= 12'}
     dependencies:
-      debug: 4.3.4
-      http-errors: 1.8.1
+      http-errors: 2.0.0
       koa-compose: 4.1.0
       methods: 1.1.2
       path-to-regexp: 6.2.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -451,13 +448,13 @@ packages:
       - supports-color
     dev: true
 
-  /@vscode/test-web/0.0.30:
-    resolution: {integrity: sha512-l1StjU5FINfgVrgaKxSrbh+wrpZiFqTT5uQ/r1qano2yn9zWYmZUczQjjzzcUI0m4/38IPkwwI3gezSwdkKtpQ==}
-    engines: {node: '>=8.9.3'}
+  /@vscode/test-web/0.0.33:
+    resolution: {integrity: sha512-bnL5yZZk7fVkQzSxtjXqdVOTOEOhRkrePVCILON8qr2ddmVMRLY1vo4HLmVkmkBRrk1cuZCEgD4+EA9QD+h4oA==}
+    engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@koa/cors': 3.4.3
-      '@koa/router': 10.1.1
+      '@koa/cors': 4.0.0
+      '@koa/router': 12.0.0
       decompress: 4.2.1
       decompress-targz: 4.1.1
       get-stream: 6.0.1
@@ -468,7 +465,7 @@ packages:
       koa-mount: 4.0.0
       koa-static: 5.0.0
       minimist: 1.2.7
-      playwright: 1.27.1
+      playwright: 1.28.1
       vscode-uri: 3.0.6
     transitivePeerDependencies:
       - supports-color
@@ -1368,7 +1365,7 @@ packages:
     dev: true
 
   /ee-first/1.1.1:
-    resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
+    resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: true
 
   /electron-to-chromium/1.4.284:
@@ -1916,6 +1913,17 @@ packages:
       inherits: 2.0.4
       setprototypeof: 1.2.0
       statuses: 1.5.0
+      toidentifier: 1.0.1
+    dev: true
+
+  /http-errors/2.0.0:
+    resolution: {integrity: sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==}
+    engines: {node: '>= 0.8'}
+    dependencies:
+      depd: 2.0.0
+      inherits: 2.0.4
+      setprototypeof: 1.2.0
+      statuses: 2.0.1
       toidentifier: 1.0.1
     dev: true
 
@@ -2812,19 +2820,19 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /playwright-core/1.27.1:
-    resolution: {integrity: sha512-9EmeXDncC2Pmp/z+teoVYlvmPWUC6ejSSYZUln7YaP89Z6lpAaiaAnqroUt/BoLo8tn7WYShcfaCh+xofZa44Q==}
+  /playwright-core/1.28.1:
+    resolution: {integrity: sha512-3PixLnGPno0E8rSBJjtwqTwJe3Yw72QwBBBxNoukIj3lEeBNXwbNiKrNuB1oyQgTBw5QHUhNO3SteEtHaMK6ag==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.27.1:
-    resolution: {integrity: sha512-xXYZ7m36yTtC+oFgqH0eTgullGztKSRMb4yuwLPl8IYSmgBM88QiB+3IWb1mRIC9/NNwcgbG0RwtFlg+EAFQHQ==}
+  /playwright/1.28.1:
+    resolution: {integrity: sha512-92Sz6XBlfHlb9tK5UCDzIFAuIkHHpemA9zwUaqvo+w7sFMSmVMGmvKcbptof/eJObq63PGnMhM75x7qxhTR78Q==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.27.1
+      playwright-core: 1.28.1
     dev: true
 
   /prebuild-install/7.1.1:
@@ -3157,6 +3165,11 @@ packages:
   /statuses/1.5.0:
     resolution: {integrity: sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==}
     engines: {node: '>= 0.6'}
+    dev: true
+
+  /statuses/2.0.1:
+    resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
+    engines: {node: '>= 0.8'}
     dev: true
 
   /string-width/4.2.3:
