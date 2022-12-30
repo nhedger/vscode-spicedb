@@ -11,7 +11,7 @@ specifiers:
   '@types/webpack-node-externals': 2.5.3
   '@typescript-eslint/eslint-plugin': 5.47.1
   '@typescript-eslint/parser': 5.47.1
-  '@vscode/test-electron': 2.1.5
+  '@vscode/test-electron': 2.2.1
   '@vscode/test-web': 0.0.30
   chai: 4.3.7
   clean-webpack-plugin: 4.0.0
@@ -42,7 +42,7 @@ devDependencies:
   '@types/webpack-node-externals': 2.5.3_webpack-cli@4.10.0
   '@typescript-eslint/eslint-plugin': 5.47.1_3gnwhcxmrhjkzh2oymysqvx5sa
   '@typescript-eslint/parser': 5.47.1_ypn2ylkkyfa5i233caldtndbqa
-  '@vscode/test-electron': 2.1.5
+  '@vscode/test-electron': 2.2.1
   '@vscode/test-web': 0.0.30
   chai: 4.3.7
   clean-webpack-plugin: 4.0.0_webpack@5.74.0
@@ -446,9 +446,9 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vscode/test-electron/2.1.5:
-    resolution: {integrity: sha512-O/ioqFpV+RvKbRykX2ItYPnbcZ4Hk5V0rY4uhQjQTLhGL9WZUvS7exzuYQCCI+ilSqJpctvxq2llTfGXf9UnnA==}
-    engines: {node: '>=8.9.3'}
+  /@vscode/test-electron/2.2.1:
+    resolution: {integrity: sha512-DUdwSYVc9p/PbGveaq20dbAAXHfvdq4zQ24ILp6PKizOBxrOfMsOq8Vts5nMzeIo0CxtA/RxZLFyDv001PiUSg==}
+    engines: {node: '>=16'}
     dependencies:
       http-proxy-agent: 4.0.1
       https-proxy-agent: 5.0.1
