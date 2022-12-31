@@ -1,0 +1,48 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "scopeName": "source.zed",
+    "patterns": [{ "include": "#comments" }, { "include": "#keywords" }],
+    "repository": {
+        "comments": {
+            "patterns": [
+                { "include": "#line-comment" },
+                { "include": "#block-comment" },
+                { "include": "#doc-comment" }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                { "include": "#definition-keyword" },
+                { "include": "#permission-keyword" },
+                { "include": "#relation-keyword" }
+            ]
+        },
+        "definition-keyword": {
+            "match": "(?:^|\\s+)definition\\s+",
+            "name": "keyword.definition.zed"
+        },
+        "permission-keyword": {
+            "match": "(?:^|\\s+)permission\\s+",
+            "name": "keyword.permission.zed"
+        },
+        "relation-keyword": {
+            "match": "(?:^|\\s+)relation\\s+",
+            "name": "keyword.relation.zed"
+        },
+        "line-comment": {
+            "begin": "//",
+            "end": "$",
+            "name": "comment.line.double-dash.zed"
+        },
+        "block-comment": {
+            "begin": "/\\*[^\\*]",
+            "end": "\\*/",
+            "name": "comment.block.zed"
+        },
+        "doc-comment": {
+            "begin": "/\\*\\*",
+            "end": "\\*/",
+            "name": "comment.block.documentation.zed"
+        }
+    }
+}
