@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/chai': 4.3.4
   '@types/glob': 8.0.0
-  '@types/mocha': 10.0.0
+  '@types/mocha': 10.0.1
   '@types/node': 18.7.23
   '@types/vscode': 1.74.0
   '@types/webpack': 5.28.0
@@ -19,7 +19,7 @@ specifiers:
   eslint: 8.24.0
   glob: 8.0.3
   lefthook: 1.1.1
-  mocha: 10.1.0
+  mocha: 10.2.0
   node-loader: 2.0.0
   prettier: 2.7.1
   prettier-plugin-packagejson: 2.3.0
@@ -34,7 +34,7 @@ specifiers:
 devDependencies:
   '@types/chai': 4.3.4
   '@types/glob': 8.0.0
-  '@types/mocha': 10.0.0
+  '@types/mocha': 10.0.1
   '@types/node': 18.7.23
   '@types/vscode': 1.74.0
   '@types/webpack': 5.28.0_webpack-cli@4.10.0
@@ -50,7 +50,7 @@ devDependencies:
   eslint: 8.24.0
   glob: 8.0.3
   lefthook: 1.1.1
-  mocha: 10.1.0
+  mocha: 10.2.0
   node-loader: 2.0.0_webpack@5.74.0
   prettier: 2.7.1
   prettier-plugin-packagejson: 2.3.0_prettier@2.7.1
@@ -272,8 +272,8 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
 
-  /@types/mocha/10.0.0:
-    resolution: {integrity: sha512-rADY+HtTOA52l9VZWtgQfn4p+UDVM2eDVkMZT1I6syp0YKxW2F9v+0pbRZLsvskhQv/vMb6ZfCay81GHbz5SHg==}
+  /@types/mocha/10.0.1:
+    resolution: {integrity: sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==}
     dev: true
 
   /@types/node/18.7.23:
@@ -2501,8 +2501,8 @@ packages:
       minimist: 1.2.7
     dev: true
 
-  /mocha/10.1.0:
-    resolution: {integrity: sha512-vUF7IYxEoN7XhQpFLxQAEMtE4W91acW4B6En9l97MwE9stL1A9gusXfoHZCLVHDUJ/7V5+lbCM6yMqzo5vNymg==}
+  /mocha/10.2.0:
+    resolution: {integrity: sha512-IDY7fl/BecMwFHzoqF2sg/SHHANeBoMMXFlS9r0OXKDssYE1M5O43wUY/9BVPeIvfH2zmEbBfseqN9gBQZzXkg==}
     engines: {node: '>= 14.0.0'}
     hasBin: true
     dependencies:
