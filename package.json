@@ -57,7 +57,7 @@
         "@types/chai": "4.3.4",
         "@types/glob": "8.0.0",
         "@types/mocha": "10.0.0",
-        "@types/node": "18.7.23",
+        "@types/node": "18.15.11",
         "@types/vscode": "1.74.0",
         "@types/webpack": "5.28.0",
         "@types/webpack-env": "1.18.0",
